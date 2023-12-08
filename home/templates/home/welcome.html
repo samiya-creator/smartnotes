@@ -1,10 +1,6 @@
-<html>
-<head>
-    <title>Welcome to my site</title>
-</head>
-<body>
+{% extends 'base.html' %}
+{% block content %}
     <h1>My first Django site</h1>
     <p>Time is now {{ current_time }}.</p>
-
-</body>
-</html>
+    <a href="{% url 'notes.list' %}" class="btn btn-primary">Check out smart notes</a>
+{% endblock %}
